@@ -4,16 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c3451a63-3279-45ea-b86b-a70318ce2f48" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workBook.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Binary Search.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Find Crossover Indices.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Find integer cube root.py" afterDir="false" />
+    <list default="true" id="c3451a63-3279-45ea-b86b-a70318ce2f48" name="Changes" comment="problem 1 completed.&#10;problem 2 solved via loop - solution with recursion in progress">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Find integer cube root.py" beforeDir="false" afterPath="$PROJECT_DIR$/Find integer cube root.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +58,20 @@
       <option name="presentableId" value="Default" />
       <updated>1719421102554</updated>
     </task>
+    <task id="LOCAL-00001" summary="problem 1 completed.&#10;problem 2 solved via loop - solution with recursion in progress">
+      <option name="closed" value="true" />
+      <created>1719516478201</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1719516478201</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="problem 1 completed.&#10;problem 2 solved via loop - solution with recursion in progress" />
+    <option name="LAST_COMMIT_MESSAGE" value="problem 1 completed.&#10;problem 2 solved via loop - solution with recursion in progress" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -89,16 +95,6 @@
           <url>file://$PROJECT_DIR$/Find Crossover Indices.py</url>
           <line>58</line>
           <option name="timeStamp" value="21" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Find integer cube root.py</url>
-          <line>56</line>
-          <option name="timeStamp" value="59" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Find integer cube root.py</url>
-          <line>57</line>
-          <option name="timeStamp" value="60" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

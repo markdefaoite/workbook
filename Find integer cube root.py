@@ -24,18 +24,24 @@ def integerCubeRootHelper(n, left, right):
     #     if cube(i) <= n:
     #         if n < i_plus_cubed:
     #             return i
-
+    print(n)
     mid = (left + right) // 2
     if cube(mid) == n:
         return mid
-    if cube(mid) >= n > cube(mid + 1):
-        return mid
 
-    elif cube(mid) > n:
-        return integerCubeRootHelper(n, left, mid)
+    if cube(mid) >= n:
 
-    elif cube(mid) < n:
-        return integerCubeRootHelper(n, mid +1, right )
+        if cube(mid +1) < n:
+            return mid
+        else:
+            return integerCubeRootHelper(n, left, mid)
+    if cube(mid) < n:
+        if cube(mid + 1) == n:
+            return mid + 1
+        if cube(mid + 1) > n:
+            return mid
+        if cube(mid + 1) < n:
+            return integerCubeRootHelper(n, mid+1, right)
 
 def integerCubeRoot(n):
     assert( n > 0)
@@ -46,22 +52,23 @@ def integerCubeRoot(n):
     return integerCubeRootHelper(n, 0, n-1)
 
 
-
-# assert(integerCubeRoot(1) == 1)
-# assert(integerCubeRoot(2) == 1)
-# assert(integerCubeRoot(4) == 1)
-# assert(integerCubeRoot(7) == 1)
-# assert(integerCubeRoot(8) == 2)
-# assert(integerCubeRoot(20) == 2)
-# assert(integerCubeRoot(26) == 2)
+assert (integerCubeRoot(1) == 1)
+assert (integerCubeRoot(2) == 1)
+assert (integerCubeRoot(4) == 1)
+assert (integerCubeRoot(7) == 1)
+assert (integerCubeRoot(8) == 2)
+assert (integerCubeRoot(20) == 2)
+assert (integerCubeRoot(26) == 2)
 for j in range(27, 64):
-    assert(integerCubeRoot(j) == 3)
-for j in range(64,125):
-    assert(integerCubeRoot(j) == 4)
+    assert (integerCubeRoot(j) == 3)
+for j in range(64, 125):
+    assert (integerCubeRoot(j) == 4)
 for j in range(125, 216):
-    assert(integerCubeRoot(j) == 5)
+    assert (integerCubeRoot(j) == 5)
 for j in range(216, 343):
-    assert(integerCubeRoot(j) == 6)
+    assert (integerCubeRoot(j) == 6)
 for j in range(343, 512):
-    assert(integerCubeRoot(j) == 7)
+    assert (integerCubeRoot(j) == 7)
 print('Congrats: All tests passed! (10 points)')
+
+# assert(integerCubeRoot(64) == 4)
