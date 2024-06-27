@@ -1,4 +1,14 @@
+# The integer cube root of a positive number  𝑛 is the smallest number  𝑖 such that  𝑖3≤𝑛 but  (𝑖+1)3>𝑛 . For
+# instance, the integer cube root of  100 is  4 since  43≤100 but  53>100 . Likewise, the integer cube root of  1000
+# is  10 .
 
+# Write a function integerCubeRootHelper(n, left, right) that searches for the integer cube-root of n between left
+# and right given the following pre-conditions:
+
+# - 𝑛≥1
+# - left < right
+# - left3 < 𝑛
+# - right3 > 𝑛
 
 
 def integerCubeRootHelper(n, left, right):
@@ -11,7 +21,6 @@ def integerCubeRootHelper(n, left, right):
     assert(right < n)
     assert(cube(left) < n), f'{left}, {right}'
     assert(cube(right) > n), f'{left}, {right}'
-    # your code here
 
     if n < 8:
         return 1
@@ -70,5 +79,3 @@ for j in range(216, 343):
 for j in range(343, 512):
     assert (integerCubeRoot(j) == 7)
 print('Congrats: All tests passed! (10 points)')
-
-# assert(integerCubeRoot(64) == 4)
