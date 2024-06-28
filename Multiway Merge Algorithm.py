@@ -11,21 +11,44 @@ Implement an algorithm that will implement the  𝑘   way merge by calling twoW
 
 
 def twoWayMerge(lst1, lst2):
+    # Implement the two way merge algorithm on
+    #          two ascending order sorted lists
+    # return a fresh ascending order sorted list that
+    #          merges lst1 and lst2
+    # your code here
+    n1 = len(lst1)
+    n2 = len(lst2)
+    if n1 == 0: # lst1 is empty
+        return list(lst2)
+    elif n2 == 0:
+        return list(lst1)
+    else:
+        output_lst = [] # This is the list we will return
+        i1 = 0
+        i2 = 0
+        while (i1 < n1 or i2 < n2):
+            if i1 < n1 and i2 < n2: # We are processing both lists
+                if (lst1[i1] <= lst2[i2]): # lst[i1] is the smaller elt
+                    output_lst.append(lst1[i1]) # append to end of output list
+                    i1 = i1 + 1 # advance index i1
+                else:
+                    output_lst.append(lst2[i2]) # append to end of output list
+                    i2 = i2 + 1 # advance index i2
+            elif i1 < n1: # We have run past the end of lst2
+                output_lst.append(lst1[i1]) # append lst1 to end of output list
+                i1 = i1 + 1
+            else:  # We have run past the end of lst1
+                output_lst.append(lst2[i2]) # append lst2 to end of output list
+                i2 = i2 + 1
+        return output_lst
 
 
-# Implement the two way merge algorithm on
-#          two ascending order sorted lists
-# return a fresh ascending order sorted list that
-#          merges lst1 and lst2
-# your code here
 
 # given a list_of_lists as input,
 #   if list_of_lists has 2 or more lists,
 #        compute 2 way merge on elements i, i+1 for i = 0, 2, ...
 #   return new list of lists after the merge
 #   Handle the case when the list size is odd carefully.
-
-
 def oneStepKWayMerge(list_of_lists):
     if (len(list_of_lists) <= 1):
         return list_of_lists
@@ -50,6 +73,7 @@ def kWayMerge(list_of_lists):
     else:
         new_list_of_lists = oneStepKWayMerge(list_of_lists)
         return kWayMerge(new_list_of_lists)
+
 
 
 # BEGIN TESTS
