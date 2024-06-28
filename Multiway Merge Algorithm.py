@@ -9,19 +9,21 @@ Implement an algorithm that will implement the  𝑘   way merge by calling twoW
 
 """
 
+
 def twoWayMerge(lst1, lst2):
-    # Implement the two way merge algorithm on
-    #          two ascending order sorted lists
-    # return a fresh ascending order sorted list that
-    #          merges lst1 and lst2
-    # your code here
 
-    # given a list_of_lists as input,
-    #   if list_of_lists has 2 or more lists,
-    #        compute 2 way merge on elements i, i+1 for i = 0, 2, ...
-    #   return new list of lists after the merge
-    #   Handle the case when the list size is odd carefully.
 
+# Implement the two way merge algorithm on
+#          two ascending order sorted lists
+# return a fresh ascending order sorted list that
+#          merges lst1 and lst2
+# your code here
+
+# given a list_of_lists as input,
+#   if list_of_lists has 2 or more lists,
+#        compute 2 way merge on elements i, i+1 for i = 0, 2, ...
+#   return new list of lists after the merge
+#   Handle the case when the list size is odd carefully.
 
 
 def oneStepKWayMerge(list_of_lists):
@@ -50,16 +52,15 @@ def kWayMerge(list_of_lists):
         return kWayMerge(new_list_of_lists)
 
 
-
 # BEGIN TESTS
-lst1= kWayMerge([[1,2,3], [4,5,7],[-2,0,6],[5]])
+lst1 = kWayMerge([[1, 2, 3], [4, 5, 7], [-2, 0, 6], [5]])
 assert lst1 == [-2, 0, 1, 2, 3, 4, 5, 5, 6, 7], "Test 1 failed"
 
-lst2 = kWayMerge([[-2, 4, 5 , 8], [0, 1, 2], [-1, 3,6,7]])
+lst2 = kWayMerge([[-2, 4, 5, 8], [0, 1, 2], [-1, 3, 6, 7]])
 assert lst2 == [-2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8], "Test 2 failed"
 
 lst3 = kWayMerge([[-1, 1, 2, 3, 4, 5]])
 assert lst3 == [-1, 1, 2, 3, 4, 5], "Test 3 Failed"
 
 print('All Tests Passed = 15 points')
-#END TESTS
+# END TESTS
